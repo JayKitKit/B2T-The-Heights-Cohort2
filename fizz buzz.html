@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+var i = 1;
+		while(i <= 100){
+		if(i%3 == 0 && i%5 == 0){
+		document.write('FizzBuzz');
+		}
+		else if(i%5 == 0){
+		document.write('Buzz');
+		}
+		else if(i%3 == 0){
+		document.write('Fizz');
+		}
+		else{
+		document.write(i);	
+			}
+			i++;
+			}
+
+	
+		var nums = [10, 5, 82, 6, 7, 65, 12, 30, 17, 38, 45];
+		var x = 0;
+		for(var i = 0; i < nums.length; i++){
+				x += nums[i]; //x = x + num[i]
+			}
+		document.write('The Total is ' + x);
+		
+		</script>
+	</body>
+</html>
