@@ -1,0 +1,46 @@
+<!DOCTYPE html >
+<html >
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="dayOfWeek"></div>
+	
+	<script type="text/javascript">
+		var dow = document.getElementById  ("dayOfWeek");
+		
+
+		var d = new Date();
+	var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+	 "Saturday"];
+	var n = week[d.getDay()];
+
+	 dow.innerHTML  = n;
+
+	switch(n){
+		case "Sunday":
+		 document.getElementById  ("dayOfWeek").innerHTML  = "Peaceful Sunday!" + n;
+		case "Monday":
+		document.getelementbyid  ("dayofWeek").innerHTML  ="Early Monday!" + n;
+		break;
+		case  "Tuesday": 
+		document.getelementbyid  ("dayofWeek").innerHTML  ="Timely Tuesdays!" + n ;
+		break;
+		case  "Wednesday": 
+		document.getElementById("dayOfWeek").innerHTML ="Worldly Wednesday! "  + n;                       
+		break;
+		case  "Thursday": document.getElementById ("dayOfWeek").innerHTML  ="Thru-way Thurday!" + n;
+		break;
+		case  "Friday": document.getElementById ("dayOfWeek").innerHTML  = "Fabulous Friday!" + n;
+		break;
+		case  "Saturday": 
+		document.getElementById ("dayOfWeek").innerHTML  ="Senior Saturday!" + n;
+		break;
+		default: 
+			document.getElementById  ("dayOfWeek").innerHTML  =("Default");
+	}	
+
+	</script>
+
+</body>
+</html >
