@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="sli.css" type="text/css">
+	<style>
+	#calc-contain {
+		position: relative;
+		width: 300px;
+		border: 4px solid black;
+		border-radius: 4px;
+		background-color:#00ffff;
+
+	}
+	input[type=button]{
+		background:  yellow;
+		width 20%;
+		font-size 20px;
+		font-weight: 900;
+		margin: 2%;
+		border-radius: 4px;
+
+	}
+	input[type=text]{
+		position: relative;
+		display: block;
+		width: 90%;
+margin: 
+
+ 	</style>
+</head>
+<body>
+
+
+		<center>
+		<div id="calc-contain">
+			<input id="btn" type="button" value="Play" onclick= "myfunction()"/>
+		<form name="calculator">
+			<input type="text" name="answer"/>
+			<br/>
+
+			<input type="button" value=" 1 " onclick="calculator.answer.value += ' 1 ' "/> 
+			<input type="button" value=" 2 " onclick="calculator.answer.value += ' 2 ' "/> 
+			<input type="button" value=" 3 " onclick="calculator.answer.value += ' 3 ' "/> 
+			<input type="button" value=" + " onclick="calculator.answer.value += ' + ' "/> 
+			<br/>
+
+
+			<input type="button" value=" 4 " onclick="calculator.answer.value += ' 4 ' "/> 
+			<input type="button" value=" 5 " onclick="calculator.answer.value += ' 5 ' "/> 
+			<input type="button" value=" 6 " onclick="calculator.answer.value += ' 6 ' "/> 
+			<input type="button" value=" - " onclick="calculator.answer.value += ' - ' "/> 
+			<br/>
+
+			<input type="button" value=" 7 " onclick="calculator.answer.value += ' 7 ' "/> 
+			<input type="button" value=" 8 " onclick="calculator.answer.value += ' 8 ' "/> 
+			<input type="button" value=" 9 " onclick="calculator.answer.value += ' 9 ' "/>
+			<input type="button" value=" x " onclick="calculator.answer.value += ' * ' "/>
+			<br/>
+
+			<input type="button" value=" C " onclick="calculator.answer.value = ' ' "/> 
+			<input type="button" value=" 0 " onclick="calculator.answer.value += ' 0 ' "/> 
+			<input type="button" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)"/>
+			<input type="button" value=" / " onclick="calculator.answer.value += ' / ' "/>   
+			</form>						
+		</div>
+			</center>
+		
+		<div class="slider">
+			<figure>
+		<div class="slide">
+			<p>Calculations</p>
+			<img src="slider_1.jpg">
+		</div>
+
+		<div class="slide">
+			<p>Are</p>
+			<img src="slider_2.jpg">
+		</div>
+
+		<div class="slide">
+			<p>Eternal</p>
+			<img src="slider_3.jpg">
+		</div>
+
+		<div class="slide">
+			<p>Long-Live</p>
+			<img src="slider_4.jpg">
+		</div>
+
+		<div class="slide">
+			<p>Equality</p>
+			<img src="slider_5.jpg">
+		</div>
+	</figure>
+	
+	</div>
+
+<script type="text/javascript">
+	var audio = new Audio();
+	audio.src="myRockinCalc.mp3"; 
+	status = "stopped";
+	var btn  = document.getElementById("btn");	
+
+	function myfunction(){
+		
+		if(status == "stopped"){
+	
+			audio.play();
+			status = "Playing";
+			btn.value = "Stop";
+			
+		}
+
+		else{
+			audio.pause();
+			audio.currentTime = 0;
+			btn.value = "Play";
+			status = "stopped";
+		}
+
+	}
+
+</script>
+</body>
+</html>
